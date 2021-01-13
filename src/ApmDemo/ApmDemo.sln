@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceApi", "EcommerceApi\EcommerceApi.csproj", "{8436A70B-87A9-4F2A-928F-39A9F09FFD0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FulfillmentApi", "FulfillmentApi\FulfillmentApi.csproj", "{929CC917-FE8A-4679-BC97-905816255EDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8436A70B-87A9-4F2A-928F-39A9F09FFD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8436A70B-87A9-4F2A-928F-39A9F09FFD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8436A70B-87A9-4F2A-928F-39A9F09FFD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8436A70B-87A9-4F2A-928F-39A9F09FFD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929CC917-FE8A-4679-BC97-905816255EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929CC917-FE8A-4679-BC97-905816255EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929CC917-FE8A-4679-BC97-905816255EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929CC917-FE8A-4679-BC97-905816255EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

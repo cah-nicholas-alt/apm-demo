@@ -1,0 +1,33 @@
+version: "3.2"
+
+services:
+  pgdb:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: $PG_PASSWORD
+    ports:
+      - 5432:5432
+
+  mssqldb:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: $MSSQL_PASSWORD
+      ACCEPT_EULA: "Y"
+    ports:
+      - 1433:1433
+
+  redis:
+    image: redis
+    command: redis-server /redis.conf
+    ports:
+      - 6379:6379
+    volumes:
+      - type: bind
+        source: ./config/redis.conf
+        target: /redis.conf
+
+  rabbit:
+      image: rabbitmq:management
+      ports:
+        - 5672:5672
+        - 15672:15672

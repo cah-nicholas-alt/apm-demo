@@ -4,6 +4,6 @@ namespace EcommerceApi.Data
 {
     public class EcommerceDbContext : DbContext
     {
-
+        
     }
 }

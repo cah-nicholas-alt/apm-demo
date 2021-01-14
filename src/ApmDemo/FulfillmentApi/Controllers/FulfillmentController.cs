@@ -10,7 +10,7 @@ namespace FulfillmentApi
     public class FulFillmentController : ControllerBase
     {
         [HttpGet("{id}/status")]
-        public Task GetFullfillmentStats(string id)
+        public Task GetFullfillmentStats(string orderId)
         {
             return Task.CompletedTask;
         }

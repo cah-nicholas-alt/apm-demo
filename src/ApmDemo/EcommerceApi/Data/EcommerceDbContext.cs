@@ -2,8 +2,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EcommerceApi.Data
 {
-    public interface EcommerceDbContext : DbContext
+    public class EcommerceDbContext : DbContext
     {
-        
+
     }
 }

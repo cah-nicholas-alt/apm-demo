@@ -1,3 +1,5 @@
+using Elastic.Apm.AspNetCore;
+using Elastic.Apm.NetCoreAll;
 using FulfillmentApi.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,12 +16,14 @@ namespace FulfillmentApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<FulfillmentDbContext>(o => o.UseNpgsql("Host=localhost;Database=fulfillment;Username=postgres;Password=abc123!~"));
+            services.AddDbContext<FulfillmentDbContext>(o =>
+                o.UseNpgsql("Host=localhost;Database=fulfillment;Username=postgres;Password=abc123!~"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseAllElasticApm();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

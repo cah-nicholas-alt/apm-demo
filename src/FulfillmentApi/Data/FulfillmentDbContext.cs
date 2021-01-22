@@ -5,7 +5,7 @@ namespace FulfillmentApi.Data
 {
     public class FulfillmentDbContext : DbContext
     {
-        DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         public FulfillmentDbContext(DbContextOptions<FulfillmentDbContext> options)
             : base(options)

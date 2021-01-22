@@ -1,9 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FulfillmentApi
+namespace FulfillmentApi.Controllers
 {
     [Route("/api/{controller}/")]
     [ApiController]

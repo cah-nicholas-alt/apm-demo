@@ -20,11 +20,11 @@ namespace FulfillmentApi
             Host.CreateDefaultBuilder(args)
                 .UseSerilog((h, c) =>
                 {
-                    c.MinimumLevel.Is(LogEventLevel.Verbose);
+                    c.MinimumLevel.Is(LogEventLevel.Warning);
                     c.Enrich.WithElasticApmCorrelationInfo();
                     c.WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
                     {
-                        MinimumLogEventLevel = LogEventLevel.Information,
+                        MinimumLogEventLevel = LogEventLevel.Warning,
                         AutoRegisterTemplate = true,
                         AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv7,
                         CustomFormatter = new EcsTextFormatter(),

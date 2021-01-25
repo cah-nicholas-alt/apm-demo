@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Elasticsearch.Net;
 using FulfillmentApi.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,10 +26,6 @@ namespace FulfillmentApi.Controllers
         [HttpGet("{orderId}/status")]
         public async Task<IActionResult> GetFulfillmentStats(int orderId)
         {
-            _logger.LogInformation("Info");
-            _logger.LogWarning("Warning");
-            _logger.LogError("Error");
-
             var orderItem = await _fulfillmentContext.OrderItems.FindAsync(orderId);
             var status = orderItem.Status;
             return Ok(status);
